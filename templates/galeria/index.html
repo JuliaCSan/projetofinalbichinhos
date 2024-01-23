@@ -1,5 +1,5 @@
 {% load static %}
-{%include 'base.html'%}
+{%include 'galeria/base.html'%}
 
 {% block content %}
     <div class="pagina-inicial">
@@ -16,9 +16,9 @@
             <section class="menu-lateral">
                 <nav class="menu-lateral__navegacao">
                     <a href="#"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais vistas</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Novas</a>
-                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Surpreenda-me</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> NOssa Missão</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Valores</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Contate-nos</a>
                 </nav>
             </section>
             <section class="conteudo">
@@ -29,10 +29,10 @@
                 <section class="tags">
                     <p class="tags__titulo">Busque por tags:</p>
                     <ul class="tags__lista">
-                        <li class="tags__tag">Nebulosa</li>
-                        <li class="tags__tag">Estrela</li>
-                        <li class="tags__tag">Galáxia</li>
-                        <li class="tags__tag">Planeta</li>
+                        <li class="tags__tag">Gato</li>
+                        <li class="tags__tag">Cachorro</li>
+                        <li class="tags__tag">Macho</li>
+                        <li class="tags__tag">Fêmea</li>
                     </ul>
                 </section>
                 <section class="galeria">
@@ -44,7 +44,7 @@
     <li class="card">
         <a href="{% url 'imagem' f.id %}">
             {% if f.foto == "" or f.foto == null %}
-                 <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.png' %} " alt="foto">
+                 <img class="card__imagem" src="{% static '/assets/img/not-found.png' %} " alt="foto">
             {% else %}
                 <img class="card__imagem" src="{{ f.foto.url }}" alt="foto">
             {% endif %}
