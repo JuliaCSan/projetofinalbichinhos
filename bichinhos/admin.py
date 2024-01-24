@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from django.contrib import admin
-from .models import Item
+from bichinhos.models import Item, Tag
 
 admin.site.register(Item)
+admin.site.register(Tag)
