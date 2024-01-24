@@ -16,3 +16,8 @@ def imagem(request, foto_id):
   animais = get_object_or_404(Item, pk=foto_id)
   return render(request, 'galeria/imagem.html', {"f": animais})
 
+def nossa_missao(request):
+  return render(request, 'galeria/nossa_missao.html')
+
+def sobre(request):
+  return render(request,'galeria/sobre.html')

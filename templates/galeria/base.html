@@ -15,6 +15,40 @@
 
 <body>
 
+<div class="pagina-'inicial">
+        <header class="cabecalho">
+            <img src="/assets/logo/Logo(2).png"  />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="O que você procura?">
+                    <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index'%}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="{% url 'nossa_missao' %}"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> NOssa Missão</a>
+                    <a href="{% url 'sobre' %}"><img src="{% static '/assets/ícones/1x/Novas - inativo.png' %}"> Sobre Nós</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Contate-nos</a>
+
+            </section>
+            <section class="conteudo">
+                <section class="banner">
+                    <img class="banner__imagem" src="{% static '/assets/imagens/Banner(2).png' %}" alt="banner python Space">
+                    <h1 class="banner__titulo"> A galeria mais completa de fotos do espaço!</h1>
+                </section>
+                <section class="tags">
+                    <p class="tags__titulo">Busque por tags:</p>
+                    <ul class="tags__lista">
+                        <li class="tags__tag"><a href="?tags=Gato">Gato</a></li>
+                        <li class="tags__tag"><a href="?tags=Cachorro">Cachorro</a></li>
+                        <li class="tags__tag"><a href="?tags=Macho">MAcho</a></li>
+                        <li class="tags__tag"><a href="?tags=Fêmea">Fêmea</a></li>
+                    </ul>
+                </section>
+
 {% block content%} {% endblock %}
 
 
